@@ -34,7 +34,7 @@ class UserRequest extends FormRequest
                 Rule::unique(User::class)->ignore($this?->user?->id),
             ],
             'password' => [$this?->user?->id ? 'nullable' : 'required'],
-            'date_of_birth' => 'required|date',
+            'date_of_birth' => 'required|date||before:' . now()->subYears(18)->format('Y-m-d'),
         ];
     }
 
