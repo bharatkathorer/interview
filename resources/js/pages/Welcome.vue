@@ -26,14 +26,14 @@ const submit = () => {
         form.put(route('users.update', form.id), {
             onSuccess: () => {
                 form.reset();
-                alert('User added successfully');
+                alert('User uodate successfully');
             }
         });
     } else {
         form.post(route('users.index'), {
             onSuccess: () => {
                 form.reset();
-                alert('User update successfully');
+                alert('User added successfully');
             }
         });
     }
