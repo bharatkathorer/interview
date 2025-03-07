@@ -82,6 +82,7 @@ const handleDeleteItem = (item: any) => {
                     />
                     <InputError :message="form.errors.email"/>
                 </div>
+
                 <div class="grid gap-2">
                     <Label for="name">User Name</Label>
                     <Input
