@@ -92,7 +92,7 @@ const handleDeleteItem = (item: any) => {
                         v-model="form.name"
                         placeholder="enter name"
                     />
-                    <InputError :message="form.errors.email"/>
+                    <InputError :message="form.errors.name"/>
                 </div>
                 <div class="grid gap-2">
                     <Label for="date_of_birth">Enter Date of birth</Label>
@@ -104,7 +104,7 @@ const handleDeleteItem = (item: any) => {
                         v-model="form.date_of_birth"
                         placeholder="enter date_of_birth"
                     />
-                    <InputError :message="form.errors.email"/>
+                    <InputError :message="form.errors.date_of_birth"/>
                 </div>
 
                 <div class="grid gap-2">
