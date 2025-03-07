@@ -10,9 +10,7 @@ Route::get('/user/{user:id}/edit', [\App\Http\Controllers\UserController::class,
 Route::put('/user/{user:id}/update', [\App\Http\Controllers\UserController::class, 'update'])->name('users.update');
 Route::delete('/user/{user:id}/delete', [\App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy');
 
-Route::get('/', function () {
-    return Inertia::render('Welcome');
-})->name('home');
+Route::get('/', [\App\Http\Controllers\UserController::class, 'index'])->name('home');
 
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
