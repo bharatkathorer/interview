@@ -26,7 +26,7 @@ const submit = () => {
         form.put(route('users.update', form.id), {
             onSuccess: () => {
                 form.reset();
-                alert('User uodate successfully');
+                alert('User update successfully');
             }
         });
     } else {
